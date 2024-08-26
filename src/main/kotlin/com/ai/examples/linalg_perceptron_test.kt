@@ -1,5 +1,6 @@
 @file:JvmName("LinRegPerceptronExample")
 package com.ai.examples
+import com.ai.CalculationFailure
 import com.ai.perceptrons.LinRegPerceptron
 fun main() {
     println(
@@ -33,7 +34,7 @@ fun main() {
             } else if (cmd == "eval") {
                 try {
                     perceptron.finalizeTraining()
-                } catch (e: LinRegPerceptron.CalculationFailure) {
+                } catch (e: CalculationFailure) {
                     println("Not enough information to train")
                 }
             } else if (cmd.substring(0, 5) == "train") {
@@ -43,7 +44,7 @@ fun main() {
                 try {
                     val (r, g, b) = cmd.substring(6).split(" ")
                     println(perceptron.guess(listOf(r, g, b)))
-                } catch (e: LinRegPerceptron.CalculationFailure) {
+                } catch (e: CalculationFailure) {
                     println("Not enough information to calculate")
                 }
             } else {
