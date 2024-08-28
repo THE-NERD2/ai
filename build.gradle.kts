@@ -1,12 +1,12 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    kotlin("jvm") version "1.9.10"
+    kotlin("jvm") version "2.0"
     id("com.github.johnrengelman.shadow") version "7.1.2"
 }
 
 group = "com.ai"
-version = "2.0"
+version = "1.0-alpha"
 
 repositories {
     mavenCentral()
@@ -25,5 +25,5 @@ tasks.test {
 }
 
 tasks.withType<KotlinCompile> {
-    kotlinOptions.jvmTarget = "1.8"
+    kotlinOptions.jvmTarget = "2.0"
 }
