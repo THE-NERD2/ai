@@ -11,12 +11,26 @@ import org.jetbrains.kotlinx.multik.api.ndarray
 import org.jetbrains.kotlinx.multik.api.zeros
 import org.jetbrains.kotlinx.multik.ndarray.data.get
 
-class LinRegPerceptron<in XType, YType>(vars: Int, xEncAlg: ((XType) -> Number)? = null, yEncAlg: ((YType) -> Number)? = null, yDecAlg: ((Number) -> YType)? = null) {
+class LinRegPerceptron<in XType, YType>(vars: Int,
+                                        xEncAlg: ((XType) -> Number)? = null,
+                                        yEncAlg: ((YType) -> Number)? = null,
+                                        yDecAlg: ((Number) -> YType)? = null): Perceptron<XType, YType> {
     private val encryptor = Encryptor(xEncAlg, yEncAlg, yDecAlg)
     private var w = mk.zeros<Double>(vars + 1, 1)
     private var xv = arrayListOf<ArrayList<Double>>()
     private var yv = arrayListOf<ArrayList<Double>>()
-    fun train(x: Collection<XType>, y: YType) = runBlocking {
+    private var isUpToDate = false
+    private fun finalizeTraining() {
+        try {
+            val X = mk.ndarray(xv)
+            val Y = mk.ndarray(yv)
+            val Xt = X.transpose()
+            w = mk.linalg.inv(Xt dot X) dot Xt dot Y
+        } catch(_: Exception) {
+            throw CalculationFailure("Not enough information to train")
+        }
+    }
+    override fun train(x: Collection<XType>, y: YType): Unit = runBlocking {
         val job = launch {
             launch {
                 x.forEach {
@@ -34,18 +48,13 @@ class LinRegPerceptron<in XType, YType>(vars: Int, xEncAlg: ((XType) -> Number)?
         }
         xv.add(doubleX)
         yv.add(arrayListOf(encryptor.encryptY(y).toDouble()))
+        isUpToDate = false
     }
-    fun finalizeTraining() {
-        try {
-            val X = mk.ndarray(xv)
-            val Y = mk.ndarray(yv)
-            val Xt = X.transpose()
-            w = mk.linalg.inv(Xt dot X) dot Xt dot Y
-        } catch(e: Exception) {
-            throw CalculationFailure("Not enough information to train")
+    override fun guess(x: Collection<XType>): YType {
+        if(!isUpToDate) {
+            finalizeTraining()
+            isUpToDate = true
         }
-    }
-    fun guess(x: Collection<XType>): YType {
         try {
             val encryptedX = arrayListOf(1.0)
             for(i in x) {
