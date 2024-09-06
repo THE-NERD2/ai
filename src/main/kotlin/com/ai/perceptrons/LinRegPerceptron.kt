@@ -2,8 +2,6 @@ package com.ai.perceptrons
 
 import com.ai.encryptors.Encryptor
 import com.ai.exceptions.CalculationFailure
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.runBlocking
 import org.jetbrains.kotlinx.multik.api.linalg.dot
 import org.jetbrains.kotlinx.multik.api.linalg.inv
 import org.jetbrains.kotlinx.multik.api.mk
@@ -30,18 +28,9 @@ class LinRegPerceptron<in XType, YType>(vars: Int,
             throw CalculationFailure("Not enough information to train")
         }
     }
-    override fun train(x: Collection<XType>, y: YType): Unit = runBlocking {
-        val job = launch {
-            launch {
-                x.forEach {
-                    encryptor.addX(it)
-                }
-            }
-            launch {
-                encryptor.addY(y)
-            }
-        }
-        job.join()
+    override fun train(x: Collection<XType>, y: YType) {
+        x.forEach(encryptor::addX)
+        encryptor.addY(y)
         val doubleX = arrayListOf(1.0)
         for(i in x) {
             doubleX.add(encryptor.encryptX(i).toDouble())

@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a07febd5-f191-44e6-a6b1-5f30a5b74798" name="Changes" comment="Migrated to Kotlin 2.0.0">
+    <list default="true" id="a07febd5-f191-44e6-a6b1-5f30a5b74798" name="Changes" comment="Removed useless coroutines">
       <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/ai/perceptrons/GradDescPerceptron.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/ai/perceptrons/Perceptron.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/ai/perceptrons/LinRegPerceptron.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/ai/perceptrons/LinRegPerceptron.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/kotlin/com/ai/examples/linalg_perceptron_test.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/com/ai/examples/linalg_perceptron_test.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -186,7 +185,8 @@
     <MESSAGE value="Lots of changes to update code style and organization. Also deleted current neural network code (it was way to complicated)." />
     <MESSAGE value="Update build.gradle.kts" />
     <MESSAGE value="Migrated to Kotlin 2.0.0" />
-    <option name="LAST_COMMIT_MESSAGE" value="Migrated to Kotlin 2.0.0" />
+    <MESSAGE value="Removed useless coroutines" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed useless coroutines" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
