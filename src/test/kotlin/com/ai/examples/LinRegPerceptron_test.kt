@@ -11,7 +11,7 @@ fun main() {
             |   guess <r> <g> <b>: guess lightness
         """.trimMargin()
     )
-    val perceptron = LinRegPerceptron<String, String>(3, xEncAlg = {
+    val perceptron = LinRegPerceptron<String, String>(3, yValues = listOf("very_dark" to 0, "dark" to 1, "light" to 2, "very_light" to 3), xEncAlg = {
         try {
             it.toInt()
         } catch(_: NumberFormatException) {

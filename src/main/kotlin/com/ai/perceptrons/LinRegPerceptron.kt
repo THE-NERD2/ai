@@ -9,15 +9,26 @@ import org.jetbrains.kotlinx.multik.api.ndarray
 import org.jetbrains.kotlinx.multik.api.zeros
 import org.jetbrains.kotlinx.multik.ndarray.data.get
 
-class LinRegPerceptron<in XType, YType>(vars: Int,
-                                        xEncAlg: ((XType) -> Number)? = null,
-                                        yEncAlg: ((YType) -> Number)? = null,
-                                        yDecAlg: ((Number) -> YType)? = null): Perceptron<XType, YType> {
-    private val encryptor = Encryptor(xEncAlg, yEncAlg, yDecAlg)
+class LinRegPerceptron<in XType, YType> private constructor(vars: Int): Perceptron<XType, YType> {
+    private lateinit var encryptor: Encryptor<XType, YType>
     private var w = mk.zeros<Double>(vars + 1, 1)
     private var xv = arrayListOf<ArrayList<Double>>()
     private var yv = arrayListOf<ArrayList<Double>>()
     private var isUpToDate = false
+    constructor(vars: Int,
+                xEncAlg: ((XType) -> Number)? = null,
+                yEncAlg: ((YType) -> Number)? = null,
+                yDecAlg: ((Number) -> YType)? = null): this(vars) {
+        encryptor = Encryptor(xEncAlg, yEncAlg, yDecAlg)
+    }
+    constructor(vars: Int,
+                xValues: Collection<Pair<XType, Number>>? = null,
+                yValues: Collection<Pair<YType, Number>>? = null,
+                xEncAlg: ((XType) -> Number)? = null,
+                yEncAlg: ((YType) -> Number)? = null,
+                yDecAlg: ((Number) -> YType)? = null): this(vars) {
+        encryptor = Encryptor(xValues, yValues, xEncAlg, yEncAlg, yDecAlg)
+    }
     private fun finalizeTraining() {
         try {
             val X = mk.ndarray(xv)

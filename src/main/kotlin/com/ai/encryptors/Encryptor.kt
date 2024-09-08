@@ -13,6 +13,16 @@ class Encryptor<in XType, YType>(ex: ((XType) -> Number)?, ey: ((YType) -> Numbe
     private val registeredYValues = arrayListOf<YType>()
     private var lastX = 0
     private var lastY = 0
+    constructor(xValues: Collection<Pair<XType, Number>>?, yValues: Collection<Pair<YType, Number>>?, ex: ((XType) -> Number)?, ey: ((YType) -> Number)?, d: ((Number) -> YType)?): this(ex, ey, d) {
+        if(xValues != null) {
+            registeredXValues.addAll(xValues.map { it.first })
+            xndict.addAll(xValues)
+        }
+        if(yValues != null) {
+            registeredYValues.addAll(yValues.map { it.first })
+            yndict.addAll(yValues)
+        }
+    }
     init {
         if(ex is (XType) -> Number) {
             encXAlg = ex

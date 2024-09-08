@@ -6,9 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="a07febd5-f191-44e6-a6b1-5f30a5b74798" name="Changes" comment="Removed useless coroutines">
       <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/ai/perceptrons/GradDescPerceptron.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/kotlin/com/ai/examples/GradDescPerceptron_test.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/kotlin/compileKotlin/local-state/build-history.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/kotlin/compileKotlin/local-state/build-history.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/ai/encryptors/Encryptor.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/ai/encryptors/Encryptor.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/ai/perceptrons/LinRegPerceptron.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/ai/perceptrons/LinRegPerceptron.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/com/ai/examples/linalg_perceptron_test.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/com/ai/examples/LinRegPerceptron_test.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,21 +65,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Gradle.Build ai.executor&quot;: &quot;Run&quot;,
-    &quot;Kotlin.Linalg_perceptron_testKt (1).executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;com.codeium.enabled&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/payton/IdeaProjects/AI&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle.Build ai.executor": "Run",
+    "Kotlin.Graddesc_perceptron_testKt.executor": "Run",
+    "Kotlin.LinRegPerceptron_testKt.executor": "Run",
+    "Kotlin.Linalg_perceptron_testKt (1).executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "com.codeium.enabled": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/payton/IdeaProjects/ai/src/test/kotlin/com/ai/examples",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/test/kotlin/com/ai/examples" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/kotlin/com/ai/encryptors" />
       <recent name="$PROJECT_DIR$/src/main/kotlin/com/ai/text" />
@@ -88,41 +96,31 @@
       <recent name="com.ai.perceptrons" />
     </key>
   </component>
-  <component name="RunManager" selected="Kotlin.Linalg_perceptron_testKt (1)">
-    <configuration name="LinAlgPerceptronExample" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.ai.examples.LinAlgPerceptronExample" />
-      <module name="AI.main" />
+  <component name="RunManager" selected="Kotlin.LinRegPerceptron_testKt">
+    <configuration name="GradDescPerceptron_testKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.ai.examples.GradDescPerceptron_testKt" />
+      <module name="AI.test" />
+      <shortenClasspath name="NONE" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LinRegPerceptronExample" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.ai.examples.LinRegPerceptronExample" />
-      <module name="AI.main" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Linalg_perceptron_testKt (1)" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.ai.examples.Linalg_perceptron_testKt" />
+    <configuration name="LinRegPerceptron_testKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.ai.examples.LinRegPerceptron_testKt" />
       <module name="AI.test" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Linalg_perceptron_testKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.ai.examples.Linalg_perceptron_testKt" />
-      <module name="AI.main" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+    <list>
+      <item itemvalue="Kotlin.LinRegPerceptron_testKt" />
+      <item itemvalue="Kotlin.GradDescPerceptron_testKt" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Kotlin.Linalg_perceptron_testKt (1)" />
-        <item itemvalue="Kotlin.LinRegPerceptronExample" />
-        <item itemvalue="Kotlin.LinAlgPerceptronExample" />
-        <item itemvalue="Kotlin.Linalg_perceptron_testKt" />
+        <item itemvalue="Kotlin.LinRegPerceptron_testKt" />
+        <item itemvalue="Kotlin.GradDescPerceptron_testKt" />
+        <item itemvalue="Kotlin.LinRegPerceptron_testKt" />
       </list>
     </recent_temporary>
   </component>
@@ -166,7 +164,15 @@
       <option name="project" value="LOCAL" />
       <updated>1725035565572</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Removed useless coroutines">
+      <option name="closed" value="true" />
+      <created>1725642388553</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1725642388553</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
