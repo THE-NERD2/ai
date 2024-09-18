@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a07febd5-f191-44e6-a6b1-5f30a5b74798" name="Changes" comment="Added training/testing data set (overfitting is probably not a concern here)">
+    <list default="true" id="a07febd5-f191-44e6-a6b1-5f30a5b74798" name="Changes" comment="Fixed bad command querying in tests">
       <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/ai/perceptrons/GradDescPerceptron.kt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/test/kotlin/com/ai/examples/GradDescPerceptron_test.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/kotlin/compileKotlin/local-state/build-history.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/kotlin/compileKotlin/local-state/build-history.bin" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -195,7 +194,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726360339199</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Fixed bad command querying in tests">
+      <option name="closed" value="true" />
+      <created>1726619842941</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1726619842941</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -218,7 +225,8 @@
     <MESSAGE value="Allowed Encryptors to declare possible encrypt-able values at instantiation" />
     <MESSAGE value="Added training/testing data set (overfitting is irrelevant in linear models)" />
     <MESSAGE value="Added training/testing data set (overfitting is probably not a concern here)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added training/testing data set (overfitting is probably not a concern here)" />
+    <MESSAGE value="Fixed bad command querying in tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed bad command querying in tests" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -228,11 +236,6 @@
           <properties class="java.lang.IllegalStateException" package="java.lang" />
           <option name="timeStamp" value="1" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/src/main/kotlin/com/ai/perceptrons/GradDescPerceptron.kt</url>
-          <line>51</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
