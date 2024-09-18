@@ -33,7 +33,7 @@ fun main() {
         try {
             if (cmd == "exit") {
                 break
-            } else if(cmd.substring(0, 8) == "trainall") {
+            } else if(cmd.length >= 8 && cmd.substring(0, 8) == "trainall") {
                 val selection: List<Pair<String, String>>
                 if(cmd != "trainall") {
                     val n = cmd.substring(9).toInt()
@@ -44,10 +44,10 @@ fun main() {
                 selection.forEach {
                     perceptron.train(it.first.getColorComponents(), it.second)
                 }
-            } else if (cmd.substring(0, 5) == "train") {
+            } else if (cmd.length > 5 && cmd.substring(0, 5) == "train") {
                 val (r, g, b, l) = cmd.substring(6).split(" ")
                 perceptron.train(listOf(r, g, b), l)
-            } else if (cmd.substring(0, 5) == "guess") {
+            } else if (cmd.length > 5 && cmd.substring(0, 5) == "guess") {
                 try {
                     val (r, g, b) = cmd.substring(6).split(" ")
                     println(perceptron.guess(listOf(r, g, b)))
