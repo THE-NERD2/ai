@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a07febd5-f191-44e6-a6b1-5f30a5b74798" name="Changes" comment="Fixed bad command querying in tests">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/ai/perceptrons/GradDescPerceptron.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/kotlin/com/ai/examples/GradDescPerceptron_test.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/kotlin/compileKotlin/local-state/build-history.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/kotlin/compileKotlin/local-state/build-history.bin" afterDir="false" />
+    <list default="true" id="a07febd5-f191-44e6-a6b1-5f30a5b74798" name="Changes" comment="Added gradient descent">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/ai/encryptors/ActivationFunction.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/ai/neuralnetworks/neuralnetworks.kt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,13 +22,20 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Kotlin Class" />
         <option value="Kotlin Interface" />
         <option value="Kotlin Object" />
+        <option value="Kotlin Class" />
+        <option value="Kotlin File" />
+        <option value="Kotlin Enum" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="nnets" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -62,23 +69,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Gradle.Build ai.executor": "Run",
-    "Kotlin.GradDescPerceptron_testKt.executor": "Debug",
-    "Kotlin.Graddesc_perceptron_testKt.executor": "Run",
-    "Kotlin.LinRegPerceptron_testKt.executor": "Run",
-    "Kotlin.Linalg_perceptron_testKt (1).executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "com.codeium.enabled": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/payton/IdeaProjects/ai/src/test/kotlin/com/ai/examples",
-    "settings.editor.selected.configurable": "configurable.group.appearance"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Gradle.Build ai.executor&quot;: &quot;Run&quot;,
+    &quot;Kotlin.GradDescPerceptron_testKt.executor&quot;: &quot;Debug&quot;,
+    &quot;Kotlin.Graddesc_perceptron_testKt.executor&quot;: &quot;Run&quot;,
+    &quot;Kotlin.LinRegPerceptron_testKt.executor&quot;: &quot;Run&quot;,
+    &quot;Kotlin.Linalg_perceptron_testKt (1).executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;com.codeium.enabled&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/payton/IdeaProjects/ai/src/test/kotlin/com/ai/examples&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.language.Kotlin&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/test/kotlin/com/ai/examples" />
@@ -92,6 +99,9 @@
       <recent name="com.ai.exceptions" />
       <recent name="com.ai" />
       <recent name="com.ai.perceptrons" />
+    </key>
+    <key name="KotlinExtractInterfaceDialog.RECENT_KEYS">
+      <recent name="com.ai.neuralnetworks" />
     </key>
   </component>
   <component name="RunManager" selected="Kotlin.GradDescPerceptron_testKt">
@@ -116,8 +126,10 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin.LinRegPerceptron_testKt" />
         <item itemvalue="Kotlin.GradDescPerceptron_testKt" />
         <item itemvalue="Kotlin.LinRegPerceptron_testKt" />
+        <item itemvalue="Kotlin.GradDescPerceptron_testKt" />
         <item itemvalue="Kotlin.LinRegPerceptron_testKt" />
       </list>
     </recent_temporary>
@@ -202,7 +214,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726619842941</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Added gradient descent">
+      <option name="closed" value="true" />
+      <created>1726620470199</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1726620470199</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -226,7 +246,8 @@
     <MESSAGE value="Added training/testing data set (overfitting is irrelevant in linear models)" />
     <MESSAGE value="Added training/testing data set (overfitting is probably not a concern here)" />
     <MESSAGE value="Fixed bad command querying in tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed bad command querying in tests" />
+    <MESSAGE value="Added gradient descent" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added gradient descent" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
