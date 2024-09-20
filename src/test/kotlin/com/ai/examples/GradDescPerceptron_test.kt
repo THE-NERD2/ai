@@ -8,7 +8,10 @@ fun main() {
         """Commands:
             |   exit: exit program
             |   train <r> <g> <b> <lightness>: store given parameters in training dataset (no space in lightness)
+            |   trainall [n]: train based on answer key (n is the size of selection. all by default.)
             |   guess <r> <g> <b>: guess lightness
+            |   accuracy: guess all and print accuracy
+            |   iterate <n>: reiterate existing data n times
         """.trimMargin()
     )
     val perceptron = GradDescPerceptron<String, String>(3, 0.00001, yValues = listOf("very_dark" to 0, "dark" to 1, "light" to 2, "very_light" to 3), xEncAlg = {
