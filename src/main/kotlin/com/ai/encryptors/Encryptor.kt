@@ -3,7 +3,7 @@ package com.ai.encryptors
 import com.ai.exceptions.NonexistentValueException
 import kotlin.math.abs
 
-class Encryptor<in XType, YType>(ex: ((XType) -> Number)?, ey: ((YType) -> Number)?, d: ((Number) -> YType)?) {
+internal class Encryptor<in XType, YType> private constructor(ex: ((XType) -> Number)?, ey: ((YType) -> Number)?, d: ((Number) -> YType)?) {
     private val encXAlg: (XType) -> Number
     private val encYAlg: (YType) -> Number
     private val decAlg: (Number) -> YType

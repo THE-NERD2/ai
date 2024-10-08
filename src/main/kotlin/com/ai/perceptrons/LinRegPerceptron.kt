@@ -16,12 +16,6 @@ class LinRegPerceptron<in XType, YType> private constructor(vars: Int): Perceptr
     private var yv = arrayListOf<ArrayList<Double>>()
     private var isUpToDate = false
     constructor(vars: Int,
-                xEncAlg: ((XType) -> Number)? = null,
-                yEncAlg: ((YType) -> Number)? = null,
-                yDecAlg: ((Number) -> YType)? = null): this(vars) {
-        encryptor = Encryptor(xEncAlg, yEncAlg, yDecAlg)
-    }
-    constructor(vars: Int,
                 xValues: Collection<Pair<XType, Number>>? = null,
                 yValues: Collection<Pair<YType, Number>>? = null,
                 xEncAlg: ((XType) -> Number)? = null,

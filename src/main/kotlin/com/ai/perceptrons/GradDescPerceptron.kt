@@ -17,13 +17,6 @@ class GradDescPerceptron<in XType, YType> private constructor(private val vars: 
     private val Y = arrayListOf<Double>()
     constructor(vars: Int,
                 learningRate: Double,
-                xEncAlg: ((XType) -> Number)? = null,
-                yEncAlg: ((YType) -> Number)? = null,
-                yDecAlg: ((Number) -> YType)? = null): this(vars, learningRate) {
-        encryptor = Encryptor(xEncAlg, yEncAlg, yDecAlg)
-    }
-    constructor(vars: Int,
-                learningRate: Double,
                 xValues: Collection<Pair<XType, Number>>? = null,
                 yValues: Collection<Pair<YType, Number>>? = null,
                 xEncAlg: ((XType) -> Number)? = null,
